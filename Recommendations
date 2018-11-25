@@ -30,3 +30,9 @@ more recommendation if i have time i will add services in the FE instead of havi
 as i will send email from the BE an Email for the client after changing his/her password
 i will put the styles on a separate file, as i will change the change password design to a popup maybe and 
 i will put a validation to the forms.
+
+i will change the node start to nodemon so i will not turn off on the server each time i want to make differance.
+
+i will make the design better :)
+
+i will put a generic toast for all the errors successfull and i will put loader as interceptor for all the Http requests.
