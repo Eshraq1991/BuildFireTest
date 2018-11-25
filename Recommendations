@@ -12,6 +12,9 @@ This is a list of recommendations to make this project better
 
 4. the Design of the whole app.
 
+5- added security using Jwt to move the user data btw FE and BE using the token of jwt-simple and encrypt the password using bcrypt
+
+
 
 ////
 to make the application run open the mongoDB and add from the post man this object
