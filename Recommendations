@@ -1,0 +1,13 @@
+Recomendations:
+This is a list of recommendations to make this project better 
+(UI, UX, Performance, Security, Architecture, Bug fix, New Feature, ...etc )
+
+// Please make your recommendations as clear as possible with only a few sentences 
+
+1. attach monoDb to the application, the users are stored in the server side not file nor DB.
+
+2. the Architecture of the BE and the FE.
+
+3. fixing the issues the image and the change button functionality
+
+4. the Design of the whole app.
