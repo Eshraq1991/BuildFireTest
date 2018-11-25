@@ -11,3 +11,22 @@ This is a list of recommendations to make this project better
 3. fixing the issues the image and the change button functionality
 
 4. the Design of the whole app.
+
+
+////
+to make the application run open the mongoDB and add from the post man this object
+
+{
+	"username":"testingpew2w21",
+	"password": "123123",
+	"fullname": "test",
+	"email": "123@123.123",
+	"profilePicture": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9017084ac611b76fb7506ccc54d854ac&w=1000&q=80"
+}
+
+//// 
+
+more recommendation if i have time i will add services in the FE instead of having the Http request inside the controller, 
+as i will send email from the BE an Email for the client after changing his/her password
+i will put the styles on a separate file, as i will change the change password design to a popup maybe and 
+i will put a validation to the forms.
