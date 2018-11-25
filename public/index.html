@@ -1,25 +1,227 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="loginApp">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Login</title>
-
-
-
     <!-- Compiled and minified Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
     <!-- Angular 1.x -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <style>
+        body {
+            background: #F1F3FA;
+        }
 
+        /* Profile container */
 
+        .profile {
+            margin: 20px 0;
+        }
+
+        /* Profile sidebar */
+
+        .profile-sidebar {
+            padding: 20px 0 10px 0;
+            background: #fff;
+        }
+
+        .profile-userpic img {
+            float: none;
+            margin: 0 auto;
+            width: 50%;
+            height: 50%;
+            -webkit-border-radius: 50% !important;
+            -moz-border-radius: 50% !important;
+            border-radius: 50% !important;
+        }
+
+        .profile-usertitle {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .profile-usertitle-name {
+            color: #5a7391;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        .profile-usertitle-job {
+            text-transform: uppercase;
+            color: #5b9bd1;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .profile-userbuttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .profile-userbuttons .btn {
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 6px 15px;
+            margin-right: 5px;
+        }
+
+        .profile-userbuttons .btn:last-child {
+            margin-right: 0px;
+        }
+
+        .profile-usermenu {
+            margin-top: 30px;
+        }
+
+        .profile-usermenu ul li {
+            border-bottom: 1px solid #f0f4f7;
+        }
+
+        .profile-usermenu ul li:last-child {
+            border-bottom: none;
+        }
+
+        .profile-usermenu ul li a {
+            color: #93a3b5;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .profile-usermenu ul li a i {
+            margin-right: 8px;
+            font-size: 14px;
+        }
+
+        .profile-usermenu ul li a:hover {
+            background-color: #fafcfd;
+            color: #5b9bd1;
+        }
+
+        .profile-usermenu ul li.active {
+            border-bottom: none;
+        }
+
+        .profile-usermenu ul li.active a {
+            color: #5b9bd1;
+            background-color: #f6f9fb;
+            border-left: 2px solid #5b9bd1;
+            margin-left: -2px;
+        }
+
+        /* Profile Content */
+
+        .profile-content {
+            padding: 20px;
+            background: #fff;
+            min-height: 460px;
+        }
+
+        ody#LoginForm {
+            background-image: url("https://hdwallsource.com/img/2014/9/blur-26347-27038-hd-wallpapers.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 10px;
+        }
+
+        .form-heading {
+            color: #fff;
+            font-size: 23px;
+        }
+
+        .panel h2 {
+            color: #444444;
+            font-size: 18px;
+            margin: 0 0 8px 0;
+        }
+
+        .panel p {
+            color: #777777;
+            font-size: 14px;
+            margin-bottom: 30px;
+            line-height: 24px;
+        }
+
+        .login-form .form-control {
+            background: #f7f7f7 none repeat scroll 0 0;
+            border: 1px solid #d4d4d4;
+            border-radius: 4px;
+            font-size: 14px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .main-div {
+            background: #ffffff none repeat scroll 0 0;
+            border-radius: 2px;
+            margin: 10px auto 30px;
+            max-width: 38%;
+            padding: 50px 70px 70px 71px;
+        }
+
+        .login-form .form-group {
+            margin-bottom: 10px;
+        }
+
+        .login-form {
+            text-align: center;
+        }
+
+        .forgot a {
+            color: #777777;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+
+        .login-form .btn.btn-primary {
+            background: #f0ad4e none repeat scroll 0 0;
+            border-color: #f0ad4e;
+            color: #ffffff;
+            font-size: 14px;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            padding: 0;
+        }
+
+        .forgot {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .botto-text {
+            color: #ffffff;
+            font-size: 14px;
+            margin: auto;
+        }
+
+        .login-form .btn.btn-primary.reset {
+            background: #ff9900 none repeat scroll 0 0;
+        }
+
+        .back {
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .back a {
+            color: #444444;
+            font-size: 13px;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container-fluid" ng-controller="loginCtrl">
-        <div class="panel panel-default" ng-hide="user" >
+        <!-- <div class="panel panel-default" ng-hide="user">
             <div class="panel-heading">Login</div>
             <div class="panel-body">
                 <div ng-show="errorMessage" class="alert alert-warning">
@@ -35,19 +237,127 @@
                 </div>
                 <button type="submit" class="btn btn-default" ng-click="login()">Login</button>
             </div>
-        </div>
-        <div ng-show="user">
-            <img src="{{user.profilePic}}"/>
-            <h1>Welcome {{user.name}}</h1>
-            <a href="#" ng-click="newPasswordMode = true" ng-hide="newPasswordMode">Change Password</a>
-            <div ng-show="newPasswordMode">
-                <label for="newPassword">New Password</label>
-                <input type="password" id="newPassword" ng-model="newPassword" placeholder="New Password">
-                <button>Change</button>
+        </div> -->
+        <div class="container" ng-hide="user">
+            <h1 class="form-heading">login Form</h1>
+            <div class="login-form">
+                <div class="main-div">
+                    <div class="panel">
+                        <h2>Login</h2>
+                        <p>Please enter your email and password</p>
+                    </div>
+                    <form id="Login" ng-submit="login()">
+
+                        <div class="form-group">
+
+
+                            <input ng-model="email" type="email" class="form-control" id="inputEmail" placeholder="Email Address">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <input ng-model="password" type="password" class="form-control" id="inputPassword" placeholder="Password">
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Login</button>
+
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <script src="js/app.js"></script>
-    <script type="module" src="js/loginCtrl.js"></script>
+        <!-- <div ng-show="user">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col col-lg-2">
+                    </div>
+                    <div class="col-12 col-md-auto">
+                        <div class="thumbnail">
+                            <img src={{user.profilePicture}}/>
+                            <div class="caption"></div>
+                            <h1 class="text-center">Welcome {{user.fullname}}</h1>
+                        </div>
+                    </div>
+                    <a href="#" ng-click="newPasswordMode = true" ng-hide="newPasswordMode" class="btn btn-primary center-block">Change Password</a>
+                </div>
+                <div ng-show="newPasswordMode">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" ng-model="newPassword" placeholder="New Password">
+                    <button ng-click="change()">Change</button>
+                </div>
+            </div>
+        </div> -->
+
+        <div ng-show="user" class="container">
+            <div class="row profile">
+                <div class="col-md-3">
+                    <div class="profile-sidebar">
+                        <!-- SIDEBAR USERPIC -->
+                        <div class="profile-userpic">
+                            <img ng-src={{user.profilePicture}} class="img-responsive" alt="">
+                        </div>
+                        <!-- END SIDEBAR USERPIC -->
+                        <!-- SIDEBAR USER TITLE -->
+                        <div class="profile-usertitle">
+                            <div class="profile-usertitle-name">
+                                {{user.fullname}}
+                            </div>
+                            <div class="profile-usertitle-job">
+                                Developer
+                            </div>
+                        </div>
+                        <!-- END SIDEBAR USER TITLE -->
+                        <!-- SIDEBAR BUTTONS -->
+                        <div class="profile-userbuttons">
+                            <button type="button" class="btn btn-success btn-sm">Follow</button>
+                            <button type="button" class="btn btn-danger btn-sm">Message</button>
+                        </div>
+                        <!-- END SIDEBAR BUTTONS -->
+                        <!-- SIDEBAR MENU -->
+                        <div class="profile-usermenu">
+                            <ul class="nav">
+                                <li class="active">
+                                    <a href="#">
+                                        <i class="glyphicon glyphicon-home"></i>
+                                        Overview </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="glyphicon glyphicon-ok"></i>
+                                        Tasks </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="glyphicon glyphicon-flag"></i>
+                                        Help </a>
+                                </li>
+                                <li>
+                                    <a ng-click="newPasswordMode = true" href="#">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                        Change Password </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!-- END MENU -->
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="profile-content">
+                        Some user related content goes here...
+                    </div>
+                    <div ng-show="newPasswordMode">
+                        <label for="newPassword">New Password</label>
+                        <input type="password" id="newPassword" ng-model="newPassword" placeholder="New Password">
+                        <button ng-click="change()">Change</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/app.js"></script>
+        <script type="module" src="js/loginCtrl.js"></script>
 </body>
+
 </html>

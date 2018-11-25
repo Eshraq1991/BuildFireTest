@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/DanielHindi/makeMeBetter#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "jwt-simple": "^0.5.5",
+    "mongoose": "^5.3.13",
     "serve-static": "^1.13.1"
   }
 }
